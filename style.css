@@ -363,7 +363,8 @@ header .container {
 
 .overlay-text {
     color: #fff;
-    text-transform: uppercase;  
+    text-transform: uppercase; 
+    font-weight: 700; 
 }
 
 
@@ -441,9 +442,9 @@ header .container {
     align-items: center;
     justify-content: center;
     fill: #AFB1B8;
-    transition-property: background;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background, fill;
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link:hover,
@@ -478,9 +479,9 @@ header .container {
     border: 1px solid #AFB1B8;
     border-radius: 4px; 
     color: #AFB1B8;
-    transition-property: background;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background, border, color;
+    transition-duration: 250ms, 250ms,250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),cubic-bezier(0.4, 0, 0.2, 1),cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link {
@@ -667,7 +668,7 @@ header .container {
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -735,11 +736,13 @@ header .container {
     stroke-width: 0;
     stroke: currentColor;
     fill:#000;
+    background-color: #fff;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+   
 }
 
 .modal-close-btn:hover,
@@ -750,6 +753,9 @@ header .container {
   .is-hidden {
     visibility: hidden;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none;    
+    transition: visibility, opacity;
+    transition-duration: 350ms, 350ms;
+    transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
   }
  
